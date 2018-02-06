@@ -44,23 +44,23 @@ public class Znamkovac {
             }
 
             double procentualniUspesnost = ziskanyPocetBodu / maximalniPocetBodu * 100;
-
-            int ziskanaZnamka = 0;
-
-            if (procentualniUspesnost <= 100 && procentualniUspesnost >= 85) {
-                ziskanaZnamka = 1;
-            } else if (procentualniUspesnost < 85 && procentualniUspesnost >= 70) {
-                ziskanaZnamka = 2;
-            } else if (procentualniUspesnost < 70 && procentualniUspesnost >= 55) {
-                ziskanaZnamka = 3;
-            } else if (procentualniUspesnost < 55 && procentualniUspesnost >= 40) {
-                ziskanaZnamka = 4;
-            } else if (procentualniUspesnost < 40 && procentualniUspesnost >= 0) {
-                ziskanaZnamka = 5;
-            }
-
+            
             double procentualniUspesnostZaokrouhlena = zaokrouhleni(procentualniUspesnost);
             
+            int ziskanaZnamka = 0;
+
+            if (procentualniUspesnostZaokrouhlena <= 100 && procentualniUspesnostZaokrouhlena >= 85) {
+                ziskanaZnamka = 1;
+            } else if (procentualniUspesnostZaokrouhlena < 85 && procentualniUspesnostZaokrouhlena >= 70) {
+                ziskanaZnamka = 2;
+            } else if (procentualniUspesnostZaokrouhlena < 70 && procentualniUspesnostZaokrouhlena >= 55) {
+                ziskanaZnamka = 3;
+            } else if (procentualniUspesnostZaokrouhlena < 55 && procentualniUspesnostZaokrouhlena >= 40) {
+                ziskanaZnamka = 4;
+            } else if (procentualniUspesnostZaokrouhlena < 40 && procentualniUspesnostZaokrouhlena >= 0) {
+                ziskanaZnamka = 5;
+            }
+           
             System.out.println("procenta: " + procentualniUspesnostZaokrouhlena + ", známka: " + ziskanaZnamka);
         } while (ziskanyPocetBodu != -1);
     }
